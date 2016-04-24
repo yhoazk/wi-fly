@@ -69,6 +69,11 @@ In short: lat DECIMAL(10, 8) NOT NULL, lng DECIMAL(11, 8) NOT NULL
 ![./img/table.png](./img/table.png)
 
 
+## hacer el id_point como unico
+```mysql
+ALTER TABLE `wifly_points` ADD UNIQUE(`id_point`);
+```
+
 ## Brief introduction on Android Architecture
 
 ### References
