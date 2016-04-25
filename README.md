@@ -69,12 +69,37 @@ In short: lat DECIMAL(10, 8) NOT NULL, lng DECIMAL(11, 8) NOT NULL
 ![./img/table.png](./img/table.png)
 
 
-## hacer el id_point como unico
+## Making the id as an unique value in the table
 ```mysql
 ALTER TABLE `wifly_points` ADD UNIQUE(`id_point`);
 ```
+## Tutotial for bitnami:
+
+[https://wiki.bitnami.com/Applications/BitNami_Custom_PHP_application](https://wiki.bitnami.com/Applications/BitNami_Custom_PHP_application)
+
+```
+$ cd installdir    
+$ cp -r docs/demo apps
+```
+After copy the files set as active line the next
+```
+Include "/installdir/apps/demo/conf/httpd-prefix.conf"
+```
+
+The server information:
+```HTM
+<VirtualHost *:8080>
+  ServerName wifly.example.com
+  DocumentRoot "/home/porko/lampstack-5.5.34-0/apps/wifly/htdocs"
+  Include "/home/porko/lampstack-5.5.34-0/apps/wifly/conf/httpd-app.conf"                                                                                           
+</VirtualHost>
+```
+
 
 ## Brief introduction on Android Architecture
+
+
+
 
 ### References
 [Clean Architecture](https://github.com/android10/Android-CleanArchitecture)

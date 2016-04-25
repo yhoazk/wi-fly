@@ -5,8 +5,10 @@
  * almacenadas en la base de datos
  */
 require 'Database.php';
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 
-class wifly_point
+class wifi_point
 {
     function __construct()
     {
@@ -133,7 +135,7 @@ class wifly_point
         "accesible,".
         "date_detec,".
         "id_point)".
-        " VALUES( ?,?,?,?,?,?,?)";
+        " VALUES( $mac48,$ssid, $coord_lat, $coord_lon, $accesible, $date_detec, $id_point)";
 
         // Preparar la sentencia
         $sentencia = Database::getInstance()->getDb()->prepare($comando);

@@ -5,6 +5,9 @@
  */
 
 require_once 'mysql_login.php';
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+print "Got myswl long in";
 
 class Database
 {
@@ -49,7 +52,7 @@ class Database
             self::$pdo = new PDO(
                 'mysql:dbname=' . DATABASE .
                 ';host=' . HOSTNAME .
-                ';port:63343;',
+                ';port:3306;',
                 USERNAME,
                 PASSWORD,
                 array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
